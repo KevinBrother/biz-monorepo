@@ -1,0 +1,39 @@
+packages:
+  # 所有 packages 目录下的包
+  - 'packages/*'
+  # 所有 apps 目录下的应用
+  - 'apps/*'
+
+# pnpm 配置
+catalog:
+  # React 核心库
+  react: ^19.1.1
+  react-dom: ^19.1.1
+  
+  # TypeScript 和类型定义
+  typescript: ^5.2.2
+  "@types/react": ^19.1.16
+  "@types/react-dom": ^19.1.9
+  "@types/node": ^20.0.0
+  
+  # CSS 工具链
+  tailwindcss: ^3.3.5
+  autoprefixer: ^10.4.16
+  postcss: ^8.4.31
+  
+  # 开发工具
+  eslint: ^8.52.0
+  "@typescript-eslint/eslint-plugin": ^8.45.0
+  "@typescript-eslint/parser": ^8.45.0
+  vite: ^4.5.0
+  tsup: ^7.2.0
+  
+  # Storybook
+  storybook: ^8.5.0
+  "@storybook/addon-essentials": ^8.5.0
+  "@storybook/addon-interactions": ^8.5.0
+  "@storybook/addon-links": ^8.5.0
+  "@storybook/blocks": ^8.5.0
+  "@storybook/react": ^8.5.0
+  "@storybook/react-vite": ^8.5.0
+  "@storybook/test": ^8.5.0

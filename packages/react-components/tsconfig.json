@@ -1,0 +1,8 @@
+{
+  "extends": "@biz/tsconfig/react.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src", "stories"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
