@@ -15,7 +15,12 @@
     "storybook:ui": "cd packages/ui && pnpm run storybook",
     "storybook:components": "cd packages/react-components && pnpm run storybook",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "test": "turbo test",
+    "test:watch": "turbo test -- --watch",
+    "check-deps": "node scripts/check-deps.js",
+    "upgrade-deps": "pnpm up --latest",
+    "reset": "pnpm run clean && rm -rf node_modules **/node_modules && pnpm install"
   },
   "devDependencies": {
     "turbo": "^2.0.0",
