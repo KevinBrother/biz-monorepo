@@ -47,7 +47,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/ui/storybook-static
           destination_dir: ui
-          
+
       - name: Deploy React Components Storybook
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'

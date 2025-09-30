@@ -23,4 +23,4 @@ export const createViteConfig = (options = {}) => {
   })
 }
 
-export default createViteConfig();
+export default createViteConfig()

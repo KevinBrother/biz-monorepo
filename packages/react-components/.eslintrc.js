@@ -11,4 +11,4 @@ module.exports = {
     'storybook-static/**',
     '.storybook/**',
   ],
-};
+}

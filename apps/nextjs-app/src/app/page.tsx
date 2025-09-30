@@ -12,30 +12,33 @@ export default function Home() {
         </div>
       </header>
 
-      <Dashboard 
+      <Dashboard
         title="Embedded React Dashboard"
         description="This React component is embedded within a Next.js application"
       />
-      
+
       <section className="bg-gray-50 py-12">
-        <FeatureSection 
+        <FeatureSection
           title="Next.js Features"
           features={[
             {
-              title: "Server-Side Rendering",
-              description: "Built-in SSR capabilities",
-              content: "Next.js provides excellent SEO and performance with server-side rendering."
+              title: 'Server-Side Rendering',
+              description: 'Built-in SSR capabilities',
+              content:
+                'Next.js provides excellent SEO and performance with server-side rendering.',
             },
             {
-              title: "File-based Routing",
-              description: "Intuitive routing system",
-              content: "Create routes by simply adding files to the pages directory."
+              title: 'File-based Routing',
+              description: 'Intuitive routing system',
+              content:
+                'Create routes by simply adding files to the pages directory.',
             },
             {
-              title: "Component Embedding",
-              description: "Seamless React component integration",
-              content: "Easily embed and reuse React components from our shared library."
-            }
+              title: 'Component Embedding',
+              description: 'Seamless React component integration',
+              content:
+                'Easily embed and reuse React components from our shared library.',
+            },
           ]}
         />
       </section>

@@ -13,4 +13,4 @@ export const createTsupConfig = (options = {}) => {
   })
 }
 
-export default createTsupConfig();
+export default createTsupConfig()

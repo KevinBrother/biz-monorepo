@@ -4,9 +4,5 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  ignorePatterns: [
-    'node_modules/**',
-    '.next/**',
-    'out/**',
-  ],
-};
+  ignorePatterns: ['node_modules/**', '.next/**', 'out/**'],
+}

@@ -1,5 +1,12 @@
 import { Button } from '@biz/ui'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@biz/ui'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@biz/ui'
 
 export interface DashboardProps {
   title?: string
@@ -7,10 +14,10 @@ export interface DashboardProps {
   showFeatureCards?: boolean
 }
 
-export function Dashboard({ 
-  title = "React Components",
-  description = "Reusable React components that can be embedded in any application",
-  showFeatureCards = true 
+export function Dashboard({
+  title = 'React Components',
+  description = 'Reusable React components that can be embedded in any application',
+  showFeatureCards = true,
 }: DashboardProps) {
   return (
     <div className="container mx-auto p-8">
@@ -24,12 +31,14 @@ export function Dashboard({
           <CardHeader>
             <CardTitle>Welcome to React Components</CardTitle>
             <CardDescription>
-              These components can be used standalone or embedded in other applications.
+              These components can be used standalone or embedded in other
+              applications.
             </CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground">
-              Try clicking the buttons below to see the different variants in action.
+              Try clicking the buttons below to see the different variants in
+              action.
             </p>
           </CardContent>
           <CardFooter className="flex justify-between">
@@ -52,20 +61,30 @@ export function Dashboard({
             <Card>
               <CardHeader>
                 <CardTitle>Embeddable</CardTitle>
-                <CardDescription>Can be embedded in Next.js or other React apps</CardDescription>
+                <CardDescription>
+                  Can be embedded in Next.js or other React apps
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>This component can be seamlessly integrated into any React application.</p>
+                <p>
+                  This component can be seamlessly integrated into any React
+                  application.
+                </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
                 <CardTitle>Standalone</CardTitle>
-                <CardDescription>Can also run as an independent application</CardDescription>
+                <CardDescription>
+                  Can also run as an independent application
+                </CardDescription>
               </CardHeader>
               <CardContent>
-                <p>The same components can be deployed as a standalone React application.</p>
+                <p>
+                  The same components can be deployed as a standalone React
+                  application.
+                </p>
               </CardContent>
             </Card>
           </div>

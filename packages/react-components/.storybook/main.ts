@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite'
 
 const config: StorybookConfig = {
   stories: ['../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -14,22 +14,19 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: async (config) => {
+  viteFinal: async config => {
     // Ensure CSS files are properly processed
-    const { default: tailwindcss } = await import('tailwindcss');
-    const { default: autoprefixer } = await import('autoprefixer');
-    
+    const { default: tailwindcss } = await import('tailwindcss')
+    const { default: autoprefixer } = await import('autoprefixer')
+
     return {
       ...config,
       css: {
         postcss: {
-          plugins: [
-            tailwindcss,
-            autoprefixer,
-          ],
+          plugins: [tailwindcss, autoprefixer],
         },
       },
-    };
+    }
   },
-};
-export default config;
+}
+export default config

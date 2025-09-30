@@ -3,25 +3,28 @@
 ## Development Setup
 
 1. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 2. Start development:
+
    ```bash
    # Start all dev servers
    pnpm run dev
-   
+
    # Or start specific apps
    cd apps/nextjs-app && pnpm run dev
    cd apps/react-standalone && pnpm run dev
    ```
 
 3. Run Storybook:
+
    ```bash
    # All Storybooks
    pnpm run storybook
-   
+
    # Specific Storybooks
    pnpm run storybook:ui           # Port 6006
    pnpm run storybook:components   # Port 6007
@@ -30,12 +33,15 @@
 ## Code Quality
 
 ### Pre-commit Hooks
+
 The project uses Husky and lint-staged for automatic code quality checks:
+
 - ESLint fixes
 - Prettier formatting
 - Type checking
 
 ### Manual Quality Checks
+
 ```bash
 # Linting
 pnpm run lint
@@ -72,7 +78,9 @@ pnpm run build-storybook
 ## Adding Dependencies
 
 ### Workspace Dependencies
+
 Use `workspace:*` for internal packages:
+
 ```json
 {
   "dependencies": {
@@ -82,6 +90,7 @@ Use `workspace:*` for internal packages:
 ```
 
 ### External Dependencies
+
 Add to the appropriate catalog in `pnpm-workspace.yaml` for version consistency across the monorepo.
 
 ## Commit Guidelines

@@ -4,10 +4,5 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
   },
-  ignorePatterns: [
-    'node_modules/**',
-    'dist/**',
-    'build/**',
-    'vite.config.ts',
-  ],
-};
+  ignorePatterns: ['node_modules/**', 'dist/**', 'build/**', 'vite.config.ts'],
+}

@@ -26,20 +26,24 @@
 ## 配置说明
 
 ### base.json
+
 - 严格模式启用
 - ES2020 目标
 - 模块解析优化
 - 源码映射和声明文件生成
 
-### react.json  
+### react.json
+
 - 包含 DOM 类型
 - JSX 支持（react-jsx）
 
 ### nextjs.json
+
 - Next.js 特定优化
 - 增量编译
 - Next.js 插件支持
 
 ### node.json
+
 - Node.js 环境优化
 - 复合项目支持

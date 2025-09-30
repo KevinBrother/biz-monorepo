@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-  ],
+  extends: ['eslint:recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   parserOptions: {
@@ -20,16 +18,11 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-non-null-assertion': 'warn',
-    
+
     // General rules
     'no-console': 'warn',
     'prefer-const': 'error',
     'no-var': 'error',
   },
-  ignorePatterns: [
-    'dist',
-    'build',
-    '.next',
-    'node_modules',
-  ],
-};
+  ignorePatterns: ['dist', 'build', '.next', 'node_modules'],
+}
