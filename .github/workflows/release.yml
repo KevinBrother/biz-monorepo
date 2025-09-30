@@ -14,6 +14,7 @@ jobs:
       contents: read
       pages: write
       id-token: write
+      actions: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,18 +41,25 @@ jobs:
       - name: Build Storybooks
         run: pnpm run build-storybook
 
-      - name: Deploy Storybooks to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
         if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/ui/storybook-static
-          destination_dir: ui
 
-      - name: Deploy React Components Storybook
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Create combined storybook directory
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p storybook-combined
+          cp -r ./packages/ui/storybook-static ./storybook-combined/ui
+          cp -r ./packages/react-components/storybook-static ./storybook-combined/components
+          echo '<!DOCTYPE html><html><head><title>Storybooks</title></head><body><h1>Storybooks</h1><ul><li><a href="./ui/">UI Components</a></li><li><a href="./components/">React Components</a></li></ul></body></html>' > ./storybook-combined/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/react-components/storybook-static
-          destination_dir: components
+          path: ./storybook-combined
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        if: github.ref == 'refs/heads/main'
