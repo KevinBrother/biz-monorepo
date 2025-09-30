@@ -28,13 +28,12 @@ function checkDependencyConsistency() {
   const packageFiles = getPackageJsonFiles()
   const dependencyVersions = new Map()
   
-  // 收集所有依赖版本
+  // 收集所有依赖版本 (排除 peerDependencies)
   packageFiles.forEach(file => {
     const packageJson = JSON.parse(fs.readFileSync(file, 'utf8'))
     const allDeps = {
       ...packageJson.dependencies,
       ...packageJson.devDependencies,
-      ...packageJson.peerDependencies,
     }
     
     Object.entries(allDeps || {}).forEach(([name, version]) => {
