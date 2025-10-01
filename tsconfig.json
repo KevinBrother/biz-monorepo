@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "packages/*/src/**/*",
+    "packages/*/stories/**/*",
+    "apps/*/src/**/*",
+    "apps/*/next-env.d.ts",
+    "apps/*/next.config.js",
+    "apps/*/tailwind.config.js",
+    "apps/*/postcss.config.js"
+  ]
+}
