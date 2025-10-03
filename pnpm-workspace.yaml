@@ -19,7 +19,7 @@ catalog:
   # CSS 工具链
   tailwindcss: ^3.3.5
   autoprefixer: ^10.4.16
-  postcss: ^8.4.31
+  postcss: ^8.5.6
 
   # 开发工具
   eslint: ^8.52.0
