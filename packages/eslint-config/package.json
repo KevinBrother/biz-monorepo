@@ -2,6 +2,7 @@
   "name": "@biz/eslint-config",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Shared ESLint configurations for the monorepo",
   "main": "index.js",
   "files": [
@@ -20,7 +21,7 @@
     "eslint-plugin-import": "^2.28.0"
   },
   "peerDependencies": {
-    "eslint": "^8.52.0",
+    "eslint": "^9.36.0",
     "typescript": "^5.2.2"
   }
 }

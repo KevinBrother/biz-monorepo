@@ -1,3 +1,3 @@
-module.exports = {
-  extends: ['./base.js'],
-}
+import base from './base.js'
+
+export default base
