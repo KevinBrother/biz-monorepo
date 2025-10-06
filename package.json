@@ -10,6 +10,10 @@
     "clean": "turbo clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "spell": "cspell .",
+    "spell:check": "cspell --no-progress .",
+    "commitlint": "commitlint --edit",
+    "commitlint:check": "commitlint --from HEAD~1 --to HEAD --verbose",
     "storybook": "turbo storybook",
     "build-storybook": "turbo build-storybook",
     "storybook:ui": "cd packages/ui && pnpm run storybook",
@@ -23,12 +27,15 @@
     "reset": "pnpm run clean && rm -rf node_modules **/node_modules && pnpm install"
   },
   "devDependencies": {
-    "turbo": "^2.0.0",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@types/node": "catalog:",
-    "typescript": "catalog:",
-    "prettier": "^3.0.0",
+    "cspell": "^9.2.1",
     "husky": "^9.0.0",
-    "lint-staged": "^15.0.0"
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "turbo": "^2.0.0",
+    "typescript": "catalog:"
   },
   "packageManager": "pnpm@9.12.3"
 }
