@@ -54,7 +54,7 @@ jobs:
           echo '<!DOCTYPE html><html><head><title>Storybooks</title></head><body><h1>Storybooks</h1><ul><li><a href="./ui/">UI Components</a></li><li><a href="./components/">React Components</a></li></ul></body></html>' > ./storybook-combined/index.html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         if: github.ref == 'refs/heads/main'
         with:
           path: ./storybook-combined
