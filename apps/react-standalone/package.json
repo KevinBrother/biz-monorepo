@@ -21,7 +21,7 @@
     "@types/react-dom": "catalog:",
     "@typescript-eslint/eslint-plugin": "catalog:",
     "@typescript-eslint/parser": "catalog:",
-    "@vitejs/plugin-react": "^4.0.3",
+    "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "catalog:",
     "eslint": "catalog:",
     "eslint-plugin-react-hooks": "^4.6.0",
